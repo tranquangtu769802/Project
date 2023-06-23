@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+</head>
+<style>
+    *{
+        padding-top: 5px;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        <form action="" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <legend>LOGIN</legend>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="inputUsername" class="col-sm-2 control-label">Username:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="Username" id="inputUsername" class="form-control" value="" required="required" pattern="" title="" placeholder="Enter userName">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="Password" id="inputPassword" class="form-control" value="" required="required" pattern="" title="" placeholder="Enter password">
+                    </div>
+                </div>
+                <!-- <div>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        
+                    </div>
+                    
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                        <p id = "quenmatkhau"><u>Bạn quên mật khẩu?</u></p>
+                    </div>
+                    
+                </div> -->
+                <div>
+                    
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        
+                    </div>
+                    
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                        <button type="button" onclick="login()" class="btn btn-primary">LOGIN</button>
+                        <button type="button" onclick="forgotPass()" class="btn btn-primary">Quen mat khau</button>
+                    </div>
+                    
+                </div> 
+        </form>
+    </div>
+</body>
+<script src="./login.js"></script>
+</html>

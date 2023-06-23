@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "D:/VISUAL CODE/SESSON_3_homework"
+		},
+		{
+			"path": "D:/VISUAL CODE/SESSON_4_Homework"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Frontend-backend"
+	}
+}

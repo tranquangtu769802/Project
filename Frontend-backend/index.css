@@ -1,0 +1,30 @@
+.pagination a.active {
+    background-color: #1e21df;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a {
+    border-radius: 5px;
+}
+
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.size {
+    width: auto;
+}
+
+.col-lg-2{
+    padding-left: 90px;
+}
+
+.col-lg-5{
+    padding-left: 5px;
+}
+.col-md-3{
+    padding-left: 139px;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <!-- bs3- container -->
+    <div class="container">
+        <br><br><br>
+
+        <!-- bs3-form -->
+        <form action="" method="POST" class="form-horizontal" role="form">
+            <legend>
+                <h2><b>Quan ly Account</b></h2>
+            </legend>
+            <br>
+
+            <!-- bs3-text:h -->
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="Email" id="inputEmail" class="form-control" value="" required="required"
+                        pattern="" title="">
+                </div>
+            </div><br>
+
+            <!-- bs3-text:h -->
+            <div class="form-group">
+                <label for="inputFirstName" class="col-sm-2 control-label">FirstName:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="FirstName" id="inputFirstName" class="form-control" value=""
+                        required="required" pattern="" title="">
+                </div>
+            </div><br>
+
+            <!-- bs3-text:h -->
+            <div class="form-group">
+                <label for="inputLastName" class="col-sm-2 control-label">LastName:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="LastName" id="inputLastName" class="form-control" value=""
+                        required="required" pattern="" title="">
+                </div>
+            </div><br>
+
+            <!-- bs3-text:h -->
+            <div class="form-group">
+                <label for="inputUserName" class="col-sm-2 control-label">UserName:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="UserName" id="inputUserName" class="form-control" value=""
+                        required="required" pattern="" title="">
+                </div>
+            </div><br>
+
+            <!-- bs3-select:h -->
+            <div class="form-group">
+                <label for="inputRole" class="col-sm-2 control-label">Role:</label>
+                <div class="col-sm-2">
+                    <select name="Role" id="inputRole" class="form-control" required="required">
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="MANAGER">MANAGER</option>
+                        <option value="EMPLOYEE">EMPLOYEE</option>
+                    </select>
+                </div>
+            </div><br>
+
+
+            <!-- bs3-select:h -->
+            <div class="form-group">
+                <label for="inputDepartment" class="col-sm-2 control-label">Department:</label>
+                <div class="col-sm-2">
+                    <select name="Department" id="inputDepartment" class="form-control" required="required">
+                        <!-- <option value="id = 1">Marketing</option> -->
+                        <!-- <option value="id = 2">Bao ve</option> -->
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <div>
+
+                <div>
+                    <!-- bs3-row-col -->
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <button type="button" class="btn btn-primary" onclick="handleSearch()">Search</button>
+                    </div>
+
+                    <!-- bs3-row-col -->
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                        <!-- bs3-input:text -->
+                        <input type="text" name="Search" id="inputSearch" class="form-control" value=""
+                            required="required" pattern="" title="" placeholder="Search UserName">
+                    </div>
+
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+
+                    </div>
+
+                </div>
+            </div>
+            <br><br><br>
+
+            <div>
+                
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <div class="form-group">
+                        <label for="inputSize" class="col-sm-2 control-label size">Size:</label>
+                        <div class="col-sm-2">
+                            <select name="Size" id="inputSize" class="form-control" required="required"
+                                style="width: 80px;" onchange="changeSize(this)">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <!-- BS3-BUTTON -->
+                <button type="button" class="addUpdate btn btn-success" onclick="addAccount()">ADD</button>
+                <button type="button" class="addUpdate btn btn-success" onclick="updateAccount()">Update</button>
+                </div>
+                
+            </div>
+
+            <!--  chon kich thuoc size cho page -->
+            
+
+
+            <!-- chinh button sang phai
+    <div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+
+        </div>
+
+        
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <button type="button" class="btn btn-default" onclick="updateAccount()">Update</button>
+        </div>
+        
+
+    </div> -->
+
+            <!-- bs3-table:hover -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID <button type="button" class="btn btn-default btn-sm" onclick="handleSort('id')"><span
+                                    class="glyphicon glyphicon-sort"></span></button></th>
+                        <th>UserName <button type="button" class="btn btn-default btn-sm"
+                                onclick="handleSort('userName')"><span class="glyphicon glyphicon-sort"></span></button>
+                        </th>
+                        <th>FirstName <button type="button" class="btn btn-default btn-sm"
+                                onclick="handleSort('firstName')"><span
+                                    class="glyphicon glyphicon-sort"></span></button></th>
+                        <th>LastName <button type="button" class="btn btn-default btn-sm"
+                                onclick="handleSort('lastName')"><span class="glyphicon glyphicon-sort"></span></button>
+                        </th>
+                        <th>Role <button type="button" class="btn btn-default btn-sm" onclick="handleSort('role')"><span
+                                    class="glyphicon glyphicon-sort"></span></button>
+                        </th>
+                        <th>DepartmentName <button type="button" class="btn btn-default btn-sm"
+                                onclick="handleSort('departmentName')"><span
+                                    class="glyphicon glyphicon-sort"></span></button></th>
+                        <th>Email <button type="button" class="btn btn-default btn-sm"
+                                onclick="handleSort('email')"><span class="glyphicon glyphicon-sort"></span></button>
+                        </th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyAccount">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+
+        <!-- bs3-pagination: tạo nút phân trang -->
+
+        <ul class="pagination" id="pageId">
+            <!-- <li><a href="#">&laquo;</a></li>
+<li><a href="#">1</a></li>
+<li><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">5</a></li>
+<li><a href="#">&raquo;</a></li> -->
+        </ul>
+
+
+
+    </div>
+
+
+</body>
+<script src="./index.js"></script>
+
+</html>
